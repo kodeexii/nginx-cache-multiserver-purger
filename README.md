@@ -1,9 +1,9 @@
 # Nginx Cache MultiServer Purger
 
 **Versi:** 1.4.0
-**Pengarang:** Hadee Roslan
+**Pengarang:** Al-Hadee Mohd Roslan
 **URI Pengarang:** https://hadeeroslan.my
-**Lesen:** MIT License
+**Lesen:** GPLv3.0
 
 Sebuah plugin WordPress untuk membersihkan cache Nginx FastCGI secara serentak merentasi pelbagai server di belakang *load balancer*. Direka untuk persekitaran *multi-server* yang memerlukan penyegerakan *cache purge* yang pantas dan boleh diskala.
 
@@ -46,11 +46,8 @@ Plugin ini memerlukan konfigurasi server yang spesifik untuk berfungsi dengan be
 
 ## Pemasangan (Installation)
 
-1.  Muat turun `plugin-update-checker.zip` dari [halaman rasminya](https://github.com/YahnisElsts/plugin-update-checker/releases).
-2.  Cipta folder `lib` di dalam direktori plugin ini.
-3.  *Unzip* dan letakkan kandungan `plugin-update-checker` ke dalam folder `lib/`.
-4.  Muat naik keseluruhan folder plugin (`nginx-cache-multiserver-purger`) ke direktori `/wp-content/plugins/` anda.
-5.  Aktifkan plugin melalui menu 'Plugins' di WordPress.
+1.  Muat naik keseluruhan folder plugin (`nginx-cache-multiserver-purger`) ke direktori `/wp-content/plugins/` anda.
+2.  Aktifkan plugin melalui menu 'Plugins' di WordPress.
 
 ---
 
@@ -69,24 +66,13 @@ Selepas pengaktifan, pergi ke **Dashboard > Settings > MultiServer Purger**.
 
 Untuk mengaktifkan fungsi kemaskini automatik:
 
-1.  Buka fail utama plugin `nginx-cache-multiserver-purger.php`.
-2.  Ubah suai URL repositori GitHub kepada URL anda sendiri.
-    ```php
-    $myUpdateChecker = PucFactory::buildUpdateChecker(
-        '[https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/)', // <-- Tukar di sini
-        __FILE__,
-        'nginx-cache-multiserver-purger'
-    );
-    $myUpdateChecker->setBranch('main'); // Tetapkan branch yang betul
-    ```
-3.  Setiap kali anda mahu mengeluarkan versi baru, naikkan nombor `Version:` dalam *header* fail utama, *commit* & *push* kod anda, dan cipta satu **"Release"** baru di GitHub dengan nombor *tag* yang sepadan (cth: `v1.4.1`).
-4.  Notifikasi kemaskini akan muncul dalam *dashboard* WordPress anda.
+1.  Notifikasi kemaskini akan muncul dalam *dashboard* WordPress anda.
 
 ---
 
 ## Lesen
 
-Plugin ini dikeluarkan di bawah MIT License. Sila rujuk fail `LICENSE` untuk butiran lanjut.
+Plugin ini dikeluarkan di bawah GPLv3.0. Sila rujuk fail `LICENSE` untuk butiran lanjut.
 
 ---
 
