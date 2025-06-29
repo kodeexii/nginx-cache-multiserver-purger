@@ -6,6 +6,7 @@ add_action('rest_api_init', 'ncmp_register_rest_routes');
 
 function ncmp_register_rest_routes() {
     register_rest_route('ncmp-purger/v1', '/purge', ['methods' => 'POST', 'callback' => 'ncmp_handle_purge_request', 'permission_callback' => 'ncmp_purge_permission_check']);
+    register_rest_route('ncmp-purger/v1', '/purge-url', ['methods' => 'POST', 'callback' => 'ncmp_handle_purge_request', 'permission_callback' => 'ncmp_purge_permission_check']);
     register_rest_route('ncmp-purger/v1', '/purge-all', ['methods' => 'POST', 'callback' => 'ncmp_handle_purge_all_request', 'permission_callback' => 'ncmp_purge_permission_check']);
 }
 
